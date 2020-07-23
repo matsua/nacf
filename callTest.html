@@ -5,8 +5,10 @@
   <title>Hybrid App</title> 
     <script type="text/javascript"> 
       function callJavascriptFromObjectiveC() { 
-        alert('called javascript function by objective-c'); 
+        alert('네이티브에서 호출한 자바스크립트 alert함수 입니다.'); 
       } 
+      
+      
       function callMessageCallHandlerFromJavascript(){
         try{
           webkit.messageHandlers.callbackHandler.postMessage("callbackHandler test");
@@ -52,7 +54,7 @@
    <body>
     <div id="container"> 
       <h3>Call Objective-C from javascript</h3> 
-      <button onclick="callMessageCallHandlerFromJavascript();">Message Call Handler</button></br></br>
+      <button onclick="callMessageCallHandlerFromJavascript();">자바 스크립트에서 네이티브 메세지 함수 호출</button></br></br>
       <button onclick="callLoginHandlerFromJavascript();">Login Handler</button></br></br>
       <button onclick="callExitHandlerFromJavascript();">Exit Handler</button></br></br>
       <button onclick="callAlertListHandlerFromJavascript();">Alert List Handler</button></br></br>
